@@ -1,4 +1,3 @@
-```markdown
 # 🛡️ DeepTruth AI  
 ### *AI-Powered Deepfake Detection with Immutable Blockchain Verification*
 
@@ -58,8 +57,6 @@ Provides `/analyze` endpoint that:
 ## 🧠 Architecture Diagram
 
 ```
-
-```
        [ User Upload ]
               |
               v
@@ -84,14 +81,11 @@ Provides `/analyze` endpoint that:
         [ Verification ]
 ```
 
-```
-
 ---
 
 ## 📁 Project Structure
 
 ```
-
 DeepTruthAI/
 │
 ├── backend/
@@ -114,8 +108,7 @@ DeepTruthAI/
 │   └── tailwind.config.js
 │
 └── README.md
-
-````
+```
 
 ---
 
@@ -126,16 +119,14 @@ DeepTruthAI/
 cd backend
 python -m venv venv
 venv\Scripts\activate
-````
+```
 
 ### 2️⃣ Install dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3️⃣ Configure `.env`
-
 ```
 RPC_URL=<Your_Sepolia_RPC>
 PRIVATE_KEY=<Your_Private_Key>
@@ -144,7 +135,6 @@ IPFS_API=<IPFS gateway or local node>
 ```
 
 ### 4️⃣ Run Flask server
-
 ```bash
 python app.py
 ```
@@ -156,13 +146,11 @@ python app.py
 ### Contract: `ContentAuthenticity.sol`
 
 Supports:
-
-* Registering new authenticity proofs
-* Fetching previous verification
-* Emitting blockchain events
+- Registering new authenticity proofs
+- Fetching previous verification
+- Emitting blockchain events
 
 ### Compile & deploy
-
 ```bash
 cd contracts
 npx hardhat compile
@@ -200,14 +188,12 @@ curl -X POST http://localhost:5000/analyze \
 ## 🧑‍💻 Frontend Setup
 
 ### Install dependencies
-
 ```bash
 cd frontend
 npm install
 ```
 
 ### Start frontend
-
 ```bash
 npm run dev
 ```
@@ -217,11 +203,10 @@ npm run dev
 ## 🔍 How Duplicate Verification Works
 
 ### ✔ When an image is uploaded:
-
-* Backend computes SHA-256
-* Calls `verifyContent(hash)`
-* If the record exists → returns old result (no blockchain gas used)
-* If not → performs detection + stores a new record
+- Backend computes SHA-256
+- Calls `verifyContent(hash)`
+- If the record exists → returns old result (no blockchain gas used)
+- If not → performs detection + stores a new record
 
 This prevents duplicate submissions and maintains integrity.
 
@@ -229,22 +214,22 @@ This prevents duplicate submissions and maintains integrity.
 
 ## 🎯 Future Improvements
 
-* More advanced deepfake models (video-based)
-* Multi-modal detection (metadata + pixels)
-* Gasless meta-transactions via Biconomy
-* User accounts + authentication
-* Public image explorer UI
-* IPFS pinning service integration
+- More advanced deepfake models (video-based)
+- Multi-modal detection (metadata + pixels)
+- Gasless meta-transactions via Biconomy
+- User accounts + authentication
+- Public image explorer UI
+- IPFS pinning service integration
 
 ---
 
 ## 🤝 Contributors
 
-| Member      | Role         | Contributions                       |
-| ----------- | ------------ | ----------------------------------- |
+| Member | Role | Contributions |
+|--------|------|---------------|
 | **Chirayu** | AI & Backend | detector.py, app.py, Flask pipeline |
-| **Jayant**  | Research     | Model comparison & evaluation       |
-| **Kunal**   | Frontend     | React UI + Web3 integration         |
+| **Jayant** | Research | Model comparison & evaluation |
+| **Kunal** | Frontend | React UI + Web3 integration |
 
 ---
 
@@ -257,6 +242,3 @@ MIT License
 ## ⭐ Support
 
 If this project helps you, please **star the repo**!
-
-```
-```
